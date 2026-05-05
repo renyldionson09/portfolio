@@ -16,31 +16,54 @@
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 5px solid rgb(100, 14, 14);
+    border: 5px solid rgb(110, 10, 10);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-ul li{
-    list-style: none;
+li{
     display: inline-block;
     margin: 40px 20px;
+    background-color: rgb(226, 221, 221);
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: large;
+    border-radius: 15%;
 }
 
-ul {
+.navbar {
     text-align: center;
+   
+}
+
+ul{
+     background-color: #222;
+    padding: 10px;
+    border-radius: 8px; 
 }
 
  .intro {
     text-align: center;
     margin-top: 20px;
-    padding-top: 500px;
+    padding-top: 600px;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 p {
     font-size: 20px;
-    color: rgb(100, 14, 14);
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
+}
+
+body {
+    background-color: hsl(0, 4%, 9%);
 }

@@ -1,6 +1,4 @@
-/* ============================================
-   ROOT VARIABLES & RESET
-   ============================================ */
+
 :root {
     --bg-primary: #0c0c14;
     --bg-secondary: #020305;
@@ -38,9 +36,7 @@ body {
     padding: 0 20px;
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -112,7 +108,7 @@ body {
     color: var(--accent);
 }
 
-/* Mobile Navigation Toggle */
+
 .nav-toggle {
     display: none;
     background: none;
@@ -148,9 +144,7 @@ body {
     top: 8px;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -212,9 +206,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+
 .btn {
     display: inline-block;
     padding: 14px 35px;
@@ -249,9 +241,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* ============================================
-   SECTION STYLES
-   ============================================ */
+
 .section-title {
     font-size: 2.5rem;
     text-align: center;
@@ -267,9 +257,7 @@ body {
     padding: 120px 20px 80px;
 }
 
-/* ============================================
-   ABOUT PAGE
-   ============================================ */
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -304,9 +292,7 @@ body {
     text-align: justify;
 }
 
-/* ============================================
-   CERTIFICATIONS PAGE
-   ============================================ */
+
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -428,9 +414,7 @@ body {
     }
 }
 
-/* ============================================
-   TECH STACK PAGE
-   ============================================ */
+
 .tech-categories {
     display: flex;
     flex-direction: column;
@@ -486,9 +470,7 @@ body {
     text-align: center;
 }
 
-/* ============================================
-   CONTACT PAGE
-   ============================================ */
+
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
@@ -536,9 +518,7 @@ body {
     font-size: 1.5rem;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 .footer {
     background: var(--bg-secondary);
     padding: 30px 20px;
@@ -546,9 +526,7 @@ body {
     color: var(--text-secondary);
 }
 
-/* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
+
 
 /* Tablet (321px - 768px) */
 @media (max-width: 768px) {

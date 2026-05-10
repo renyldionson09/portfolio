@@ -5,23 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certifications | Renyl Dionson</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
 </head>
 <body>
-    <div class="main">
-    <header>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="techstacks.html">Tech Stacks</a></li>
-            <li><a href="certification.html">Certification</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </header>
-
-    <div class="cert-container">
-        <h1>Certifications</h1>      
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RD</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="certifications.html" class="nav-link active">Certifications</a></li>
+                <li><a href="techstack.html" class="nav-link">Tech Stacks</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="container">
+            <h1 class="section-title">My <span class="highlight">Certifications</span></h1>
+            
+            <div class="certifications-grid">
+                <!-- Certification 1 -->
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="images/cert1.jpg" alt="Web Development Certification" class="cert-image">
+                    </div>
+                    <a href="[credential-link-1.com](https://www.credential-link-1.com)" target="_blank" rel="noopener noreferrer" class="cert-label">
+                        Web Development Fundamentals
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="images/cert2.jpg" alt="UI/UX Design Certification" class="cert-image">
+                    </div>
+                    <a href="[credential-link-2.com](https://www.credential-link-2.com)" target="_blank" rel="noopener noreferrer" class="cert-label">
+                        UI/UX Design Principles
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Certification 3 -->
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="images/cert3.jpg" alt="JavaScript Certification" class="cert-image">
+                    </div>
+                    <a href="[credential-link-3.com](https://www.credential-link-3.com)" target="_blank" rel="noopener noreferrer" class="cert-label">
+                        JavaScript Essentials
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Certification 4 -->
+                <div class="cert-card">
+                    <div class="cert-image-wrapper">
+                        <img src="images/cert4.jpg" alt="Responsive Web Design Certification" class="cert-image">
+                    </div>
+                    <a href="[credential-link-4.com](https://www.credential-link-4.com)" target="_blank" rel="noopener noreferrer" class="cert-label">
+                        Responsive Web Design
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal" id="certModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Renyl Dionson. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

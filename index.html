@@ -5,21 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renyl Dionson | Web Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
 </head>
 <body>
-    </div>
-    <div class="main">
-        <div>
-        <img src="images/image3.jpg" height="700" class="profile-pic" alt="Si renyl po pala to!">
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="certification.html">Certifications</a></li>
-            <li><a href="techstacks.html">Tech Stacks</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <h1 class="intro">Hi! I'm Renyl Dionson</h1>
-        <p>UI/UX Designer</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RD</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="techstack.html" class="nav-link">Tech Stacks</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="images/image3.jpg" alt="Renyl Dionson - Professional Portrait">
+            </div>
+            <h1 class="hero-title">Hi! I'm <span class="highlight">Renyl Dionson</span></h1>
+            <p class="hero-subtitle">UI/UX Designer & Web Developer</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">About Me</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Renyl Dionson. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

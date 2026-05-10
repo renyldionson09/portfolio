@@ -4,29 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Renyl Dionson</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
 </head>
 <body>
-    <div class="main">
-    <header>
-        <ul class="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="techstacks.html">Tech Stacks</a></li>
-            <li><a href="certification.html">Certification</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </header>
-
-    <div class="about-container">
-        <img src="images/image3.jpg" height="700" class="profile-about" alt="Si renyl po pala to!">
-        <h1>Hi, I'm Renyl Dionson</h1>
-        <br>
-        <pre>             I am a student at St. Dominic College of Asia with 
-             a passion for turning complex problems into simple, 
-             beautiful digital experiences. I spend my time exploring
-             the balance between visual aesthetics and user functionality.</pre>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RD</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About Me</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="techstack.html" class="nav-link">Tech Stacks</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1 class="section-title">About <span class="highlight">Me</span></h1>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="Renyl Dionson">
+                </div>
+                
+                <div class="about-text">
+                    <!-- First Paragraph: 3-5 sentences about yourself -->
+                    <p class="about-paragraph">
+                        Hello! I'm Renyl Dionson, a passionate UI/UX Designer and aspiring Web Developer currently pursuing my studies in Information Technology. I have a deep interest in creating visually appealing and user-friendly digital experiences that make a difference. My journey in tech started with a curiosity about how websites work, which eventually grew into a full-blown passion for design and development. I enjoy solving complex problems through creative solutions and am constantly learning new technologies to improve my skills. When I'm not coding, you can find me exploring design trends and experimenting with new tools.
+                    </p>
+                    
+                    <!-- Second Paragraph: 2-4 sentences about professional aspirations -->
+                    <p class="about-paragraph">
+                        My professional aspiration is to become a full-stack developer who can bridge the gap between beautiful design and functional code. I aim to work with innovative companies where I can contribute to projects that positively impact users' lives. In the future, I hope to lead a team of developers and designers, creating products that set industry standards for usability and aesthetics. Continuous learning and growth are at the core of my career goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Renyl Dionson. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -19,15 +19,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// ============================================
-// Certification Modal (Image Enlarge)
-// ============================================
 const modal = document.getElementById('certModal');
 const modalImg = document.getElementById('modalImage');
 const modalCaption = document.getElementById('modalCaption');
 const modalClose = document.querySelector('.modal-close');
 
-// Open modal when clicking certification image
+
 document.querySelectorAll('.cert-image').forEach(img => {
     img.addEventListener('click', function() {
         modal.classList.add('active');
@@ -37,7 +34,7 @@ document.querySelectorAll('.cert-image').forEach(img => {
     });
 });
 
-// Close modal
+
 if (modalClose) {
     modalClose.addEventListener('click', closeModal);
 }
@@ -50,7 +47,7 @@ if (modal) {
     });
 }
 
-// Close modal with Escape key
+
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
         closeModal();
@@ -62,9 +59,6 @@ function closeModal() {
     document.body.style.overflow = 'auto';
 }
 
-// ============================================
-// Smooth Scroll for Internal Links
-// ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -78,9 +72,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ============================================
-// Navbar Background on Scroll
-// ============================================
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -90,9 +81,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ============================================
-// Animation on Scroll (Simple Fade In)
-// ============================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -106,7 +94,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe elements for animation
 document.querySelectorAll('.cert-card, .tech-item, .about-paragraph').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -114,7 +101,7 @@ document.querySelectorAll('.cert-card, .tech-item, .about-paragraph').forEach(el
     observer.observe(el);
 });
 
-// Add fade-in class styles
+
 const style = document.createElement('style');
 style.textContent = `
     .fade-in {

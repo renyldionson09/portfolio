@@ -66,6 +66,10 @@ body {
     transition: var(--transition);
 }
 
+.logo {
+padding-left: 20;
+}
+
 .logo:hover {
     color: var(--accent-hover);
     transform: scale(1.05);

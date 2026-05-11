@@ -9,9 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .cert-image {
+            cursor: zoom-in;
+        }
+        .cert-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: none;
+            transition: opacity 0.2s;
+        }
+        .cert-title a:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
-   
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">RD</a>
@@ -20,8 +35,8 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link ">About Me</a></li>
-                <li><a href="certification.html" class="nav-link active">Certifications</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="certification.html" class="nav-link">Certifications</a></li>
                 <li><a href="techstacks.html" class="nav-link">Tech Stacks</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -31,33 +46,78 @@
     <section class="certifications-section">
         <div class="container">
             <br>
+            <br>
             <h1 class="section-title">My <span class="highlight">Certifications</span></h1>
-            
+
             <div class="certifications-grid">
                 <div class="certification-card">
-                    <img src="images/networking basics.png" alt="Certification 1" class="cert-image">
-                    <h3 class="cert-title">NETWORKING BASIC</h3>
+                    <img src="images/networking basics.png" alt="Networking Basic Certificate" class="cert-image">
+                    <h3 class="cert-title">
+                        <a href="https://www.credly.com/badges/84be6d4d-f89f-49f9-9856-ce24e7595746" target="_blank" rel="noopener">
+                            NETWORKING BASIC
+                        </a>
+                    </h3>
                 </div>
 
-
                 <div class="certification-card">
-                    <img src="images/Phyton essential 1.png" alt="Certification 2" class="cert-image">
-                    <h3 class="cert-title">PHYTON ESSENTIAL 1</h3>
+                    <img src="images/Phyton essential 1.png" alt="Python Essential 1 Certificate" class="cert-image">
+                    <h3 class="cert-title">
+                        <a href="https://www.credly.com/badges/3ae2628d-2088-4975-afd2-64bfd514fe93" target="_blank" rel="noopener">
+                            PYTHON ESSENTIAL 1
+                        </a>
+                    </h3>
                 </div>
 
-               
                 <div class="certification-card">
-                    <img src="images/saylor-images-0.jpg" alt="Certification 3" class="cert-image">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h3 class="cert-title">SOFTWARE ENGINNERING</h3>
+                    <img src="images/saylor-images-0.jpg" alt="Software Engineering Certificate" class="cert-image">
+                    <br><br><br><br>
+                    <h3 class="cert-title">
+                        <a href="https://learn.saylor.org/user/view.php?id=2976635&course=788" target="_blank" rel="noopener">
+                            SOFTWARE ENGINEERING
+                        </a>
+                    </h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <div class="modal" id="certModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImg" src="" alt="">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const modal = document.getElementById('certModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+        const modalClose = document.getElementById('modalClose');
+
+        document.querySelectorAll('.cert-image').forEach(function(img) {
+            img.addEventListener('click', function() {
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                modalCaption.textContent = this.alt;
+                modal.classList.add('active');
+            });
+        });
+
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

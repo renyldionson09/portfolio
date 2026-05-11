@@ -5,8 +5,8 @@
     --bg-card: #0f3460;
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
-    --accent: #9b2c3f;
-    --accent-hover: #9b2c3f;
+    --accent: #b60d07;
+    --accent-hover: #c81633;
     --gradient: linear-gradient(135deg, var(--accent) 0%, #ff6b6b 100%);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;

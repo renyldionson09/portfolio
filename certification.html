@@ -51,8 +51,8 @@
 
             <div class="certifications-grid">
                 <div class="certification-card">
-                    <img src="images/networking basics.png" alt="Networking Basic Certificate" class="cert-image">
-                    <br><br>
+                    <img src="images/Networking_Basic.png" alt="Networking Basic Certificate" class="cert-image">
+                    <br><br><br><br><br>
                     <h3 class="cert-title">
                         <a href="https://www.credly.com/badges/84be6d4d-f89f-49f9-9856-ce24e7595746" target="_blank" rel="noopener">
                             NETWORKING BASIC
@@ -61,8 +61,8 @@
                 </div>
 
                 <div class="certification-card">
-                    <img src="images/Phyton essential 1.png" alt="Python Essential 1 Certificate" class="cert-image">
-                    <br><br>
+                    <img src="images/Python_Essentials.png" alt="Python Essential 1 Certificate" class="cert-image">
+                    <br><br><br><br><br>
                     <h3 class="cert-title">
                         <a href="https://www.credly.com/badges/3ae2628d-2088-4975-afd2-64bfd514fe93" target="_blank" rel="noopener">
                             PYTHON ESSENTIAL 1
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="certification-card">
-                    <img src="images/saylor-images-0.jpg" alt="Software Engineering Certificate" class="cert-image">
+                    <img src="images/software_engineering.png" alt="Software Engineering Certificate" class="cert-image">
                     <br><br><br><br>
                     <h3 class="cert-title">
                         <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=7197250394RD" target="_blank" rel="noopener">
@@ -81,11 +81,21 @@
                 </div>
 
                 <div class="certification-card">
-                    <img src="images/saylor2.png" alt="Software Engineering Certificate" class="cert-image">
+                    <img src="images/saylor2.png" alt="Introduction to Database Systems Certificate" class="cert-image">
                     <br><br><br><br>
                     <h3 class="cert-title">
                         <a href="https://learn.saylor.org/admin/tool/certificate/index.php?code=1957047708RD" target="_blank" rel="noopener">
                             INTRODUCTION TO DATABASE SYSTEMS
+                        </a>
+                    </h3>
+                </div>
+
+                <div class="certification-card">
+                    <img src="images/C-Cert.png" alt="Codechum Certificate" class="cert-image">
+                    <br><br><br><br><br>
+                    <h3 class="cert-title">
+                        <a href="https://app.codechum.com/certificates/6059" target="_blank" rel="noopener">
+                            CODECHUM CERTIFICATE
                         </a>
                     </h3>
                 </div>
@@ -99,37 +109,6 @@
         <div class="modal-caption" id="modalCaption"></div>
     </div>
 
-    <script src="js/script.js"></script>
-    <script>
-        const modal = document.getElementById('certModal');
-        const modalImg = document.getElementById('modalImg');
-        const modalCaption = document.getElementById('modalCaption');
-        const modalClose = document.getElementById('modalClose');
-
-        document.querySelectorAll('.cert-image').forEach(function(img) {
-            img.addEventListener('click', function() {
-                modalImg.src = this.src;
-                modalImg.alt = this.alt;
-                modalCaption.textContent = this.alt;
-                modal.classList.add('active');
-            });
-        });
-
-        modalClose.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modal.classList.remove('active');
-            }
-        });
+    <script src="js/script.js">
     </script>
-</body>
-</html>
+</body> 

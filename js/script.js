@@ -1,6 +1,3 @@
-// ============================================
-// Mobile Navigation Toggle
-// ============================================
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -11,7 +8,6 @@ if (navToggle) {
     });
 }
 
-// Close menu when clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navToggle.classList.remove('active');
@@ -20,20 +16,28 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 const modal = document.getElementById('certModal');
-const modalImg = document.getElementById('modalImage');
+const modalImg = document.getElementById('modalImg'); 
 const modalCaption = document.getElementById('modalCaption');
-const modalClose = document.querySelector('.modal-close');
-
+const modalClose = document.getElementById('modalClose'); // Gamit ang ID para mas mabilis
 
 document.querySelectorAll('.cert-image').forEach(img => {
     img.addEventListener('click', function() {
-        modal.classList.add('active');
-        modalImg.src = this.src;
-        modalCaption.textContent = this.alt;
-        document.body.style.overflow = 'hidden';
+        if (modal && modalImg) {
+            modal.classList.add('active');
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            if (modalCaption) modalCaption.textContent = this.alt;
+            document.body.style.overflow = 'hidden'; // Stop scrolling background
+        }
     });
 });
 
+function closeModal() {
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scroll
+    }
+}
 
 if (modalClose) {
     modalClose.addEventListener('click', closeModal);
@@ -47,17 +51,11 @@ if (modal) {
     });
 }
 
-
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+    if (e.key === 'Escape') {
         closeModal();
     }
 });
-
-function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -74,10 +72,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(26, 26, 46, 0.98)';
-    } else {
-        navbar.style.background = 'rgba(26, 26, 46, 0.95)';
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(26, 26, 46, 0.98)';
+        } else {
+            navbar.style.background = 'rgba(26, 26, 46, 0.95)';
+        }
     }
 });
 
@@ -94,13 +94,13 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.cert-card, .tech-item, .about-paragraph').forEach(el => {
+// Targetin ang tamang classes para sa animation
+document.querySelectorAll('.certification-card, .tech-item, .about-paragraph').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(el);
 });
-
 
 const style = document.createElement('style');
 style.textContent = `
